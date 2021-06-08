@@ -1,8 +1,9 @@
 # Web Client SDK
 
 Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
-## Please note on Jul 20, Chrome 92 will release. Start from chrome92, [SharedArrayBuffer](https://web.dev/coop-coep/) only work for cross-origin isolation. it make WebSDK broken if you don't do any thing when user use Chrome 91.
 
+## Please note that on July 20, Chrome 92 will release. From then onwards, [SharedArrayBuffer](https://web.dev/coop-coep/) will only work with cross-origin isolation enabled. If you do not enable cross-origin isolation, the WebSDK will break for users on Chrome 91.
+To enable:
 1. Apply `SharedArrayBuffers` [origintrials](https://developer.chrome.com/origintrials/#/trials/active) for you domain, it works until Chrome 94 release.
 2. Seting you WebSDK/VideoSDK web isolation and update to >= 1.9.5.
 
